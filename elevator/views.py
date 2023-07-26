@@ -61,22 +61,28 @@ class ElevatorViewSet(viewsets.ModelViewSet):
             "is_operational": elevator.is_operational,
         }
         return Response(status)
+    
+    @action(detail=True, methods=['post'])
+    def mark_maintenance(self, request, pk=None):
+        elevator = self.get_object()
+        elevator.mark_maintenance()
+        return Response(f"Elevator {elevator.id} marked as under maintenance.")
+    
+    @action(detail=True, methods=['post'])
+    def mark_available(self, request, pk=None):
+        elevator = self.get_object()
+        elevator.mark_available()
+        return Response(f"Elevator {elevator.id} marked as available.")
 
     @action(detail=True, methods=['post'])
     def associate_floor(self, request, pk=None):
         elevator = self.get_object()
-        floor_number = request.query_params.get('floor_number')
+        floor_number = request.data.get('floor_number')
         if floor_number is not None:
             elevator.associate_floor(int(floor_number))  # Convert 'floor_number' to an integer
             return Response(f"Elevator {elevator.id} associated with Floor {floor_number}.")
         else:
             return Response("Please provide a valid 'floor_number' as a query parameter.", status=400)
-
-    @action(detail=True, methods=['post'])
-    def mark_available(self, request, pk=None):
-        elevator = self.get_object()
-        elevator.mark_available()
-        return Response(f"Elevator {elevator.id} is marked available.")
 
     @action(detail=True, methods=['post'])
     def mark_operational(self, request, pk=None):
@@ -92,7 +98,7 @@ class ElevatorViewSet(viewsets.ModelViewSet):
     
     @action(detail=True, methods=['post'])
     def create_user_request(self, request, pk=None):
-        floor_number = request.query_params.get('floor_number')
+        floor_number = request.data.get('floor_number')
         if floor_number is not None:
             try:
                 floor_number = int(floor_number)

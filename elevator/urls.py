@@ -16,6 +16,7 @@ urlpatterns = [
     path('elevators/<int:pk>/stop_running/', ElevatorViewSet.as_view({'post': 'stop_running'}), name='stop_running'),
     path('elevators/<int:pk>/display_status/', ElevatorViewSet.as_view({'get': 'display_status'}), name='display_status'),
     path('elevators/<int:pk>/associate_floor/', ElevatorViewSet.as_view({'post': 'associate_floor'}), name='associate_floor'),
+    path('elevators/<int:pk>/mark_maintenance/', ElevatorViewSet.as_view({'post': 'mark_maintenance'}), name='mark_maintenance'),
     path('elevators/<int:pk>/mark_available/', ElevatorViewSet.as_view({'post': 'mark_available'}), name='mark_available'),
     path('elevators/<int:pk>/mark_operational/', ElevatorViewSet.as_view({'post': 'mark_operational'}), name='mark_operational'),
     path('elevators/<int:pk>/mark_not_operational/', ElevatorViewSet.as_view({'post': 'mark_not_operational'}), name='mark_not_operational'),

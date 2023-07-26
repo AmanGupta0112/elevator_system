@@ -19,6 +19,11 @@ class Elevator(models.Model):
         self.is_running = False
         self.save()
 
+    def start_running(self):
+        self.direction = "START"
+        self.is_running = True
+        self.save()
+
     def open_door(self):
         self.door_open = True
         self.save()
@@ -64,6 +69,8 @@ class Elevator(models.Model):
     def mark_available(self):
         # Mark the elevator as available and clear destinations when idle
         self.is_available = True
+        self.is_operational = True
+        self.start_running()
         self.destinations.clear()
         self.save()
 
