@@ -28,7 +28,7 @@ chmod +x setup.sh
 source setup.sh
 ```
 
-6. The API will be available at `http://localhost:8000/`.
+2. The API will be available at `http://localhost:8000/`.
 
 ## API Endpoints
 
