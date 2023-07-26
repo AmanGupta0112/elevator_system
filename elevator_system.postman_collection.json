@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "06c733e4-2f0c-4ed4-aa93-69158d603073",
+		"name": "elevator_system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17614070"
+	},
+	"item": [
+		{
+			"name": "Create Elevators",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"num_floors\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elevators Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Floors Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/floors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"floors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Floors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"floor_number\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/floors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"floors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"floor_number\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/create_user_request/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"create_user_request",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assosiate Elevator to floor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"floor_number\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/2/associate_floor/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"2",
+						"associate_floor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marked Non Operational",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/2/mark_not_operational/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"2",
+						"mark_not_operational",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marked Operational",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/2/mark_operational/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"2",
+						"mark_operational",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marked Maintenance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/2/mark_maintenance/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"2",
+						"mark_maintenance",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark Available",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/mark_available/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"mark_available",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Moving Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/move_up/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"move_up",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Moving Down",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/move_down/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"move_down",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Door",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/open_door/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"open_door",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Door Close",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/close_door/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"close_door",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Moving",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/start_running/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"start_running",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Moving",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/stop_running/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"stop_running",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/display_status/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"display_status",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assosiate to Floor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"floor_number\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/elevators/1/associate_floor/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"elevators",
+						"1",
+						"associate_floor",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
