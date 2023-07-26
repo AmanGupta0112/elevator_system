@@ -1,5 +1,3 @@
-Sure, here's an example of a README file for the Elevator System project:
-
 # Elevator System
 
 The Elevator System is a simplified elevator model implemented using Django and Django REST Framework. It allows users to control multiple elevators and make requests to move the elevators between floors.
@@ -57,17 +55,17 @@ python manage.py runserver
 
 ## API Endpoints
 
-- `GET /elevators/`: List all elevators or create a new elevator.
-- `GET /elevators/{id}/`: Retrieve details of a specific elevator.
-- `POST /elevators/{id}/move_up/`: Move an elevator up to the next destination.
-- `POST /elevators/{id}/move_down/`: Move an elevator down to the next destination.
-- `POST /elevators/{id}/open_door/`: Open the door of an elevator.
-- `POST /elevators/{id}/close_door/`: Close the door of an elevator.
-- `GET /elevators/{id}/get_next_destination/`: Get the next destination floor for an elevator.
-- `POST /elevators/{id}/associate_floor/`: Associate an elevator with a specific floor.
-- `POST /elevators/{id}/mark_maintenance/`: Mark an elevator as under maintenance.
-- `GET /floors/`: List all floors or create a new floor.
-- `GET /floors/{id}/`: Retrieve details of a specific floor.
+- `GET api/elevators/`: List all elevators or create a new elevator.
+- `GET api/elevators/{id}/`: Retrieve details of a specific elevator.
+- `POST api/elevators/{id}/move_up/`: Move an elevator up to the next destination.
+- `POST api/elevators/{id}/move_down/`: Move an elevator down to the next destination.
+- `POST api/elevators/{id}/open_door/`: Open the door of an elevator.
+- `POST api/elevators/{id}/close_door/`: Close the door of an elevator.
+- `GET api/elevators/{id}/get_next_destination/`: Get the next destination floor for an elevator.
+- `POST api/elevators/{id}/associate_floor/`: Associate an elevator with a specific floor.
+- `POST api/elevators/{id}/mark_maintenance/`: Mark an elevator as under maintenance.
+- `GET api/floors/`: List all floors or create a new floor.
+- `GET api/floors/{id}/`: Retrieve details of a specific floor.
 
 ## Usage
 
