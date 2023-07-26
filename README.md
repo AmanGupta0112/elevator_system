@@ -21,34 +21,11 @@ The Elevator System is a simplified elevator model implemented using Django and 
 
 ## Installation
 
-1. Clone the repository:
+1. Run setup.sh file to setup the project:
 
 ```
-git clone https://github.com/your-username/elevator-system.git
-```
-
-2. Change into the project directory:
-
-```
-cd elevator-system
-```
-
-3. Install the required Python packages:
-
-```
-pip install -r requirements.txt
-```
-
-4. Set up the database (if using Postgres):
-
-```
-python manage.py migrate
-```
-
-5. Run the development server:
-
-```
-python manage.py runserver
+chmod +x setup.sh
+source setup.sh
 ```
 
 6. The API will be available at `http://localhost:8000/`.
