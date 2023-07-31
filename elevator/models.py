@@ -93,11 +93,11 @@ class Elevator(models.Model):
         if self.destinations.exists():
             floor_numbers = [floor.floor_number for floor in self.destinations.all()]
             if self.direction == "UP":
-                next_floor = max(floor_numbers, default=None)
+                next_floor = min(floor_numbers, default=None)
                 if next_floor is not None and next_floor > self.current_floor:
                     return next_floor
             else:
-                next_floor = min(floor_numbers, default=None)
+                next_floor = max(floor_numbers, default=None)
                 if next_floor is not None and next_floor < self.current_floor:
                     return next_floor
 
